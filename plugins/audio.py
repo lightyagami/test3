@@ -84,7 +84,7 @@ async def play(client, m: Message):
                ]),
             )
         except Exception as e:
-            await msg.edit(f"❌ **An Error Occoured !** \n\nError: `{e}`")
+            await msg.edit(f"❌ **An Error Occurred !** \n\nError: `{e}`")
             return await group_call.stop()
 
     elif media.audio or media.document:
@@ -109,7 +109,7 @@ async def play(client, m: Message):
             await group_call.start_audio(audio, repeat=False)
             AUDIO_CALL[chat_id] = group_call
             await msg.delete()
-            await m.reply_text(f"▶️ **Started [Audio Streaming](https://t.me/AsmSafone) In {m.chat.title} !**",
+            await m.reply_text(f"▶️ **Started [Audio Streaming] In {m.chat.title} !**",
                reply_markup=InlineKeyboardMarkup(
                [
                    [

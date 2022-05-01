@@ -14,7 +14,7 @@ env:
   REPLY_MESSAGE: "${{ secrets.REPLY_MESSAGE }}"
   SESSION_STRING: "${{ secrets.SESSION_STRING }}"
   SUPPORT_GROUP: "${{ secrets.SUPPORT_GROUP }}"
-  UPDATES_CHANNEL: "${{ secrets.UPDATES_CHANNEL }"
+  UPDATES_CHANNEL: "${{ secrets.UPDATES_CHANNEL }}"
   ASSISTANT_NAME: "${{ secrets.ASSISTANT_NAME }}"
 
 jobs:
@@ -57,5 +57,5 @@ jobs:
          timeout-minutes: 350
          continue-on-error: true
          run: |
-           python3 -m bot
+           python3 main.py
            echo "Bot Died"
